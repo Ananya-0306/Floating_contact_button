@@ -1,0 +1,79 @@
+<!doctype html>
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Draggable Help Button</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/help.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--<div class="title">San <span>Diego</span></div>-->
+    <div class="col-md-12 col-sm-12 col-xs-12" id="main"></div>
+    <div class="help inactive" id="help">
+        <p class="help-text">?</p>
+
+        <div class="helpbox">
+            <i class="icon ion-close-round x"></i>
+            <div class="help-form">
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" id="name" placeholder="Name" required></textarea>
+                    <textarea class="form-control" rows="5" id="job" placeholder="Job Title" required></textarea>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    <textarea class="form-control" rows="5" id="company" placeholder="Company Name" required></textarea>
+                </div>
+                <textarea class="form-control" rows="5" id="message" placeholder="Message" required></textarea>
+                <button type="submit" id="help-submit" class="btn  btn-lg btn-block">SEND</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--<footer> <p>&copy; Mike Fix 2015</p></footer>-->
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>');</script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/help.js"></script>
+    <script src="js/jquery.browser.js"></script>
+
+    <!-- TODO fix so it does this before load-->
+    <script>
+        // $('.help').draggable({
+        //     containment: 'parent',
+        //     cursor: 'move'
+        // });
+        var options = {
+            color: "green",
+            send: function () {
+                alert("Thank you for getting in touch! We appreciate you contacting us and one of our specialists will get in touch with you shortly. Have a great day!");
+            }
+        };
+        set(options);
+    </script>
+    <!--<script>
+            var options = {
+                draggable : false,
+                top: '50%',
+                left: '50%',
+                send: function(){
+                    alert("Hello");
+                },
+                color: "blue",
+                background_color: "salmon"
+            };
+            set(options);
+        </script>-->
+</body>
+
+</html>
